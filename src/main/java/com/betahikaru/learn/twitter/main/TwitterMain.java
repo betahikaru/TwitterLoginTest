@@ -1,8 +1,6 @@
 package com.betahikaru.learn.twitter.main;
 
 import java.awt.Desktop;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -29,7 +27,7 @@ public class TwitterMain {
 		/// load properties
 		Properties properties = new Properties();
 		try {
-			properties.load(new FileInputStream(new File("conf/twitter4j.properties")));
+			properties.load(TwitterMain.class.getClassLoader().getResourceAsStream("twitter4j.properties"));
 			DEBUG = Boolean.parseBoolean(properties.getProperty("debug"));
 			CONSUMER_KEY = properties.getProperty("oauth.consumerKey");
 			CONSUMER_SECRET = properties.getProperty("oauth.consumerSecret");
