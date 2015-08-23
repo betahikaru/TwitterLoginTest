@@ -1,0 +1,10 @@
+# Debug Mode
+debug=true
+
+# Twitter App's Consumer Key and Secret
+oauth.consumerKey=
+oauth.consumerSecret=
+
+# Twitter App's Access Token
+oauth.accessToken=
+oauth.accessTokenSecret=
